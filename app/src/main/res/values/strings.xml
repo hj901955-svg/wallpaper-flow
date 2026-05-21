@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Aurora</string>
+    <string name="nav_explore">Explore</string>
+    <string name="nav_live">Live</string>
+    <string name="nav_ai">AI Studio</string>
+    <string name="nav_scheduler">Auto-Change</string>
+    <string name="nav_favorites">Curated</string>
+</resources>

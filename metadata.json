@@ -1,0 +1,6 @@
+{
+  "name": "Aurora",
+  "description": "Minimalist and elegant interactive wallpaper platform featuring static images, live generative canvases, scheduled automatic changes, and AI-powered prompt styling.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
