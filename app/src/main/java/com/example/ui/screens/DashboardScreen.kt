@@ -282,7 +282,8 @@ fun DashboardScreen(
                                 LiveWallpaperCanvas(
                                     liveType = wall.liveType,
                                     colors = parsedThemeColors,
-                                    modifier = Modifier.fillMaxSize()
+                                    modifier = Modifier.fillMaxSize(),
+                                    promptConfig = wall.prompt
                                 )
                             } else {
                                 AsyncImage(

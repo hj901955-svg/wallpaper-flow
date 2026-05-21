@@ -73,7 +73,7 @@ class MainActivity : ComponentActivity() {
                                 viewModel = viewModel,
                                 onTabSelected = { currentTab = it }
                             )
-                            "live" -> LiveLabScreen()
+                            "live" -> LiveLabScreen(viewModel = viewModel)
                             "ai" -> AiStudioScreen(viewModel = viewModel)
                             "schedule" -> AutoChangeScreen(viewModel = viewModel)
                             "favorites" -> FavoritesScreen(viewModel = viewModel)

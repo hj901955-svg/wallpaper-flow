@@ -225,6 +225,22 @@ class WallpaperViewModel(private val repository: WallpaperRepository) : ViewMode
         }
     }
 
+    fun insertCustomLiveWallpaper(wallpaper: WallpaperEntity) {
+        viewModelScope.launch {
+            try {
+                _isAiGenerating.value = true
+                val id = repository.insertWallpaper(wallpaper)
+                val inserted = wallpaper.copy(id = id)
+                selectActiveWallpaper(inserted)
+                _schedulerLogMsg.value = "Saved custom interactive wallpaper: '${wallpaper.title}'!"
+            } catch (e: Exception) {
+                Log.e(TAG, "Failed to insert custom wallpaper", e)
+            } finally {
+                _isAiGenerating.value = false
+            }
+        }
+    }
+
     fun deleteWallpaper(wallpaper: WallpaperEntity) {
         viewModelScope.launch {
             repository.deleteWallpaper(wallpaper.id)
